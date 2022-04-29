@@ -1,11 +1,10 @@
 <!-- eslint-disable @intlify/vue-i18n/no-raw-text -->
 <template>
   <div id="app">
-    <TopBanner />
+    <!-- <TopBanner /> -->
     <metainfo>
-      <template
-        v-slot:title="{ content }"
-      >{{ content ? `${content} | PRODUCT_NAME` : 'PRODUCT_NAME' }}</template>
+      <template v-slot:title="{ content }">{{ content ? `${content} | PRODUCT_NAME` : 'PRODUCT_NAME'
+      }}</template>
     </metainfo>
     <router-view></router-view>
   </div>
@@ -14,12 +13,12 @@
 <script lang="ts">
 import store from "./store";
 import { Theme } from "./application/enums/shared/Theme";
-import TopBanner from "@/components/ui/banners/TopBanner.vue";
+// import TopBanner from "@/components/ui/banners/TopBanner.vue";
 import { onMounted } from "@vue/runtime-core";
 import { useMeta } from "vue-meta";
 export default {
   components: {
-    TopBanner
+    // TopBanner
   },
   setup() {
     useMeta({
